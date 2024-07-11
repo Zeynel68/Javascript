@@ -47,55 +47,97 @@
 //     alert("Durumunuz: İdeal kilonun çok üstünde(morbid obez) endeks değeri :" + indeks)
 // }
 
-let yakıt = prompt("Yakıt tipinin numarasını giriniz: Dizel:1, Benzin:2, LPG:3")
-let litre = Number(prompt ("İstediğiniz litre miktarını giriniz"))
-let para = Number(prompt("Paranızın miktarını giriniz."))
-let dizel = 24.53
-let benzin = 22.25
-let LPG = 11.1
-let dizelFiyati = dizel*litre
-let benzinFiyati = benzin*litre
-let LPGFiyati = LPG*litre
+// let yakıt = prompt("Yakıt tipinin numarasını giriniz: Dizel:1, Benzin:2, LPG:3")
+// let litre = Number(prompt ("İstediğiniz litre miktarını giriniz"))
+// let para = Number(prompt("Paranızın miktarını giriniz."))
+// let dizel = 24.53
+// let benzin = 22.25
+// let LPG = 11.1
+// let dizelFiyati = dizel*litre
+// let benzinFiyati = benzin*litre
+// let LPGFiyati = LPG*litre
 
 
-if( yakıt==1){
-    if(para>dizelFiyati){
-        alert("Para üstünüz:" + (para-dizelFiyati))
-    }
-    else if(para<dizelFiyati){
-        alert("Paranız yeterli değil.")
-    }
-    else if(para=dizelFiyati){
-        alert("Para üstünüz yoktur.")
-    }
-}  
+// if( yakıt==1){
+//     if(para>dizelFiyati){
+//         alert("Para üstünüz:" + (para-dizelFiyati))
+//     }
+//     else if(para<dizelFiyati){
+//         alert("Paranız yeterli değil.")
+//     }
+//     else if(para=dizelFiyati){
+//         alert("Para üstünüz yoktur.")
+//     }
+// }  
  
 
- else if(yakıt==2){
-    if(para>benzinFiyati){
-        alert("Para üstünüz:" + (para-benzinFiyati))
-    }
-    if(para<benzinFiyati){
-        alert("Paranız yeterli değil.")
-    }
-     if(para=benziFiyati){
-        alert("Para üstünüz yoktur.")
-    }  
- } 
+//  else if(yakıt==2){
+//     if(para>benzinFiyati){
+//         alert("Para üstünüz:" + (para-benzinFiyati))
+//     }
+//     if(para<benzinFiyati){
+//         alert("Paranız yeterli değil.")
+//     }
+//      if(para=benziFiyati){
+//         alert("Para üstünüz yoktur.")
+//     }  
+//  } 
  
  
- else if(yakıt==3){
-    if(para>LPGFiyati){
-        alert("Para üstünüz:" + (para-LPGFiyati))
-    }
-    if(para<LPGFiyati){
-        alert("Paranız yeterli değil.")
-    }
-     if(para=LPGFiyati){
-        alert("Para üstünüz yoktur.")
-    } 
+//  else if(yakıt==3){
+//     if(para>LPGFiyati){
+//         alert("Para üstünüz:" + (para-LPGFiyati))
+//     }
+//     if(para<LPGFiyati){
+//         alert("Paranız yeterli değil.")
+//     }
+//      if(para=LPGFiyati){
+//         alert("Para üstünüz yoktur.")
+//     } 
+//  }
+
+// else(
+//     alert("Yakıt türü olarak geçerli bir rakam giriniz.")
+// )
+
+
+
+let yenisatır = "\r\n";
+let bakiye = 1000;
+
+ let metin = "Banka hesabına hoşgeldin! Lütfen uygulamak istediğiniz işlemin numarasını giriniz" + yenisatır
+ +"1 Bakiye Görüntüleme" +yenisatır
+ +"2-Para Çekme" + yenisatır
+ +"3-Para Yatırma" + yenisatır
+ +"4-Çıkış";
+
+let secim = prompt(metin)
+
+ switch(secim){
+    case "1":
+        alert("Bakiyeniz:" + bakiye)
+    break;
+    
+    case "2":
+     let cekme = Number(prompt("Çekmek istediğiniz para miktarını giriniz:"))
+     if(cekme>bakiye){
+        alert("Hata oluştu, bu kadar miktarda paranız yok.")
+     }
+     else (cekme<=bakiye);{
+        alert("Para çekme işleminiz tamamlandı.") 
+        bakiye = bakiye-cekme
+     }
+    break;
+
+    case "3":
+      let yatirma = Number(prompt("Yatırmak istediğiniz para miktarını giriniz:")) && (bakiye+yatirma)
+    break;
+
+    case "4":
+        alert("Çıkış yapıldı, yine bekleriz.")
+    break;
+
+  default:
+    alert("Lütfen 1 ile 4 arasında rakam giriniz!")
  }
-
-else(
-    alert("Yakıt türü olarak geçerli bir rakam giriniz.")
-)
+ 
