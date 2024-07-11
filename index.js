@@ -30,20 +30,72 @@
 
 //vücut indeksi: kg/m kare
 
-let kg = Number(prompt("Lütfen ağırlığınızı kilogram cinsinden giriniz."))
-let m = Number(prompt("Lütfen boyunuzu metere cinsinden giriniz."))
+// let kg = Number(prompt("Lütfen ağırlığınızı kilogram cinsinden giriniz."))
+// let m = Number(prompt("Lütfen boyunuzu metere cinsinden giriniz."))
 
-let indeks = kg/(m**2);
+// let indeks = kg/(m**2);
 
-if(indeks<18.5){
-    alert("Durumunuz: İdeal kilonun altında endeks değeri:" + indeks)
-}  else if(indeks>=18.5 && indeks<= 24.9){
-    alert("Durumunuz: İdeal kiloda endeks değeri: " + indeks)
-}  else if(indeks>=25 && indeks<=30){
-    alert("Durumunuz: İdeal kilonun üstünde endeks değeri: " + indeks)
-}  else if(indeks>=30 && indeks<= 39.9){
-    alert("Durumunuz: İdeal kilonun çok üstünde(obez) endeks değeri: " + indeks)
-}  else(40>indeks);{
-    alert("Durumunuz: İdeal kilonun çok üstünde(morbid obez) endeks değeri :" + indeks)
-}
+// if(indeks<18.5){
+//     alert("Durumunuz: İdeal kilonun altında endeks değeri:" + indeks)
+// }  else if(indeks>=18.5 && indeks<= 24.9){
+//     alert("Durumunuz: İdeal kiloda endeks değeri: " + indeks)
+// }  else if(indeks>=25 && indeks<=30){
+//     alert("Durumunuz: İdeal kilonun üstünde endeks değeri: " + indeks)
+// }  else if(indeks>=30 && indeks<= 39.9){
+//     alert("Durumunuz: İdeal kilonun çok üstünde(obez) endeks değeri: " + indeks)
+// }  else(40>indeks);{
+//     alert("Durumunuz: İdeal kilonun çok üstünde(morbid obez) endeks değeri :" + indeks)
+// }
 
+let yakıt = prompt("Yakıt tipinin numarasını giriniz: Dizel:1, Benzin:2, LPG:3")
+let litre = Number(prompt ("İstediğiniz litre miktarını giriniz"))
+let para = Number(prompt("Paranızın miktarını giriniz."))
+let dizel = 24.53
+let benzin = 22.25
+let LPG = 11.1
+let dizelFiyati = dizel*litre
+let benzinFiyati = benzin*litre
+let LPGFiyati = LPG*litre
+
+
+if( yakıt==1){
+    if(para>dizelFiyati){
+        alert("Para üstünüz:" + (para-dizelFiyati))
+    }
+    else if(para<dizelFiyati){
+        alert("Paranız yeterli değil.")
+    }
+    else if(para=dizelFiyati){
+        alert("Para üstünüz yoktur.")
+    }
+}  
+ 
+
+ else if(yakıt==2){
+    if(para>benzinFiyati){
+        alert("Para üstünüz:" + (para-benzinFiyati))
+    }
+    if(para<benzinFiyati){
+        alert("Paranız yeterli değil.")
+    }
+     if(para=benziFiyati){
+        alert("Para üstünüz yoktur.")
+    }  
+ } 
+ 
+ 
+ else if(yakıt==3){
+    if(para>LPGFiyati){
+        alert("Para üstünüz:" + (para-LPGFiyati))
+    }
+    if(para<LPGFiyati){
+        alert("Paranız yeterli değil.")
+    }
+     if(para=LPGFiyati){
+        alert("Para üstünüz yoktur.")
+    } 
+ }
+
+else(
+    alert("Yakıt türü olarak geçerli bir rakam giriniz.")
+)
