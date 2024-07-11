@@ -102,42 +102,86 @@
 
 
 
-let yenisatır = "\r\n";
-let bakiye = 1000;
+// let yenisatır = "\r\n";
+// let bakiye = 1000;
 
- let metin = "Banka hesabına hoşgeldin! Lütfen uygulamak istediğiniz işlemin numarasını giriniz" + yenisatır
- +"1 Bakiye Görüntüleme" +yenisatır
- +"2-Para Çekme" + yenisatır
- +"3-Para Yatırma" + yenisatır
- +"4-Çıkış";
+//  let metin = "Banka hesabına hoşgeldin! Lütfen uygulamak istediğiniz işlemin numarasını giriniz" + yenisatır
+//  +"1 Bakiye Görüntüleme" +yenisatır
+//  +"2-Para Çekme" + yenisatır
+//  +"3-Para Yatırma" + yenisatır
+//  +"4-Çıkış";
 
-let secim = prompt(metin)
+// let secim = prompt(metin)
 
- switch(secim){
-    case "1":
-        alert("Bakiyeniz:" + bakiye)
-    break;
+//  switch(secim){
+//     case "1":
+//         alert("Bakiyeniz:" + bakiye)
+//     break;
     
-    case "2":
-     let cekme = Number(prompt("Çekmek istediğiniz para miktarını giriniz:"))
-     if(cekme>bakiye){
-        alert("Hata oluştu, bu kadar miktarda paranız yok.")
-     }
-     else (cekme<=bakiye);{
-        alert("Para çekme işleminiz tamamlandı.") 
-        bakiye = bakiye-cekme
-     }
-    break;
+//     case "2":
+//      let cekme = Number(prompt("Çekmek istediğiniz para miktarını giriniz:"))
+//      if(cekme>bakiye){
+//         alert("Hata oluştu, bu kadar miktarda paranız yok.")
+//      }
+//      else (cekme<=bakiye);{
+//         alert("Para çekme işleminiz tamamlandı.") 
+//         bakiye = bakiye-cekme
+//      }
+//     break;
 
-    case "3":
-      let yatirma = Number(prompt("Yatırmak istediğiniz para miktarını giriniz:")) && (bakiye+yatirma)
-    break;
+//     case "3":
+//       let yatirma = Number(prompt("Yatırmak istediğiniz para miktarını giriniz:")) && (bakiye+yatirma)
+//     break;
 
-    case "4":
-        alert("Çıkış yapıldı, yine bekleriz.")
-    break;
+//     case "4":
+//         alert("Çıkış yapıldı, yine bekleriz.")
+//     break;
 
-  default:
-    alert("Lütfen 1 ile 4 arasında rakam giriniz!")
- }
+//   default:
+//     alert("Lütfen 1 ile 4 arasında rakam giriniz!")
+//  }
  
+
+let turkceDogru, turkceYanlıs = 0;
+let matdogru, matYalnıs = 0;
+let sosyalDogru, sosyalYanlıs = 0;
+let fendogru, fenYalnıs = 0;
+let puan = 0;
+
+let yeniSatir = "\r\n"
+let mesaj = "TYT puan hesaplama uygulamasına hoşgeldiniz! İşlemini yapmak istediğiniz rakamı giriniz:" +yeniSatir
++ "1-Puan Hesaplama"+ yeniSatir
++"2- Çıkış Yap"
+
+
+let secim = prompt(mesaj)
+
+switch(secim){
+    case "1":
+      turkceDogru =     Number(prompt("Türkçe doğru sayısı:"))
+      turkceYanlıs =     Number(prompt("Türkçe yanlış sayısı:"))  
+
+      matdogru =     Number(prompt("Matematik doğru sayısı:"))
+      matYalnıs =     Number(prompt("Matematik yanlış sayısı:"))
+    
+      sosyalDogru =     Number(prompt("Sosyal doğru sayısı:"))
+      sosyalYanlıs =     Number(prompt("Sosyal yanlış sayısı:"))
+   
+      fendogru =     Number(prompt("Fen doğru sayısı:"))
+      fenYalnıs =     Number(prompt("Fen yanlış sayısı:"))
+  
+      let dogruNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
+      let yalnısNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
+      let asılDogru = dogruNet - (yalnısNet/4)
+      puan= (asılDogru*4) + 100
+     alert("Puanınız: " + puan )
+     break;
+  
+  case "2":
+    alert("Uygulamadan çıkış yapıldı")
+    break;
+
+    default:
+        alert("Lütfen geçerli bir rakam seçiniz.")
+    break;
+    }
