@@ -142,46 +142,63 @@
 //  }
  
 
-let turkceDogru, turkceYanlıs = 0;
-let matdogru, matYalnıs = 0;
-let sosyalDogru, sosyalYanlıs = 0;
-let fendogru, fenYalnıs = 0;
-let puan = 0;
+// let turkceDogru, turkceYanlıs = 0;
+// let matdogru, matYalnıs = 0;
+// let sosyalDogru, sosyalYanlıs = 0;
+// let fendogru, fenYalnıs = 0;
+// let puan = 0;
 
-let yeniSatir = "\r\n"
-let mesaj = "TYT puan hesaplama uygulamasına hoşgeldiniz! İşlemini yapmak istediğiniz rakamı giriniz:" +yeniSatir
-+ "1-Puan Hesaplama"+ yeniSatir
-+"2- Çıkış Yap"
+// let yeniSatir = "\r\n"
+// let mesaj = "LGS puan hesaplama uygulamasına hoşgeldiniz! İşlemini yapmak istediğiniz rakamı giriniz:" +yeniSatir
+// + "1-Puan Hesaplama"+ yeniSatir
+// +"2- Çıkış Yap"
 
 
-let secim = prompt(mesaj)
+// let secim = prompt(mesaj)
 
-switch(secim){
-    case "1":
-      turkceDogru =     Number(prompt("Türkçe doğru sayısı:"))
-      turkceYanlıs =     Number(prompt("Türkçe yanlış sayısı:"))  
+// switch(secim){
+//     case "1":
+//       turkceDogru =     Number(prompt("Türkçe doğru sayısı:"))
+//       turkceYanlıs =     Number(prompt("Türkçe yanlış sayısı:"))  
 
-      matdogru =     Number(prompt("Matematik doğru sayısı:"))
-      matYalnıs =     Number(prompt("Matematik yanlış sayısı:"))
+//       matdogru =     Number(prompt("Matematik doğru sayısı:"))
+//       matYalnıs =     Number(prompt("Matematik yanlış sayısı:"))
     
-      sosyalDogru =     Number(prompt("Sosyal doğru sayısı:"))
-      sosyalYanlıs =     Number(prompt("Sosyal yanlış sayısı:"))
+//       sosyalDogru =     Number(prompt("Sosyal doğru sayısı:"))
+//       sosyalYanlıs =     Number(prompt("Sosyal yanlış sayısı:"))
    
-      fendogru =     Number(prompt("Fen doğru sayısı:"))
-      fenYalnıs =     Number(prompt("Fen yanlış sayısı:"))
+//       fendogru =     Number(prompt("Fen doğru sayısı:"))
+//       fenYalnıs =     Number(prompt("Fen yanlış sayısı:"))
   
-      let dogruNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
-      let yalnısNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
-      let asılDogru = dogruNet - (yalnısNet/4)
-      puan= (asılDogru*4) + 100
-     alert("Puanınız: " + puan )
-     break;
+//       let dogruNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
+//       let yalnısNet = (turkceDogru+matdogru+sosyalDogru+fendogru)
+//       let asılDogru = dogruNet - (yalnısNet/4)
+//       puan= (asılDogru*4) + 100
+//      alert("LGS Puanınız: " + puan )
+//      break;
   
-  case "2":
-    alert("Uygulamadan çıkış yapıldı")
-    break;
+//   case "2":
+//     alert("Uygulamadan çıkış yapıldı")
+//     break;
 
-    default:
-        alert("Lütfen geçerli bir rakam seçiniz.")
-    break;
+//     default:
+//         alert("Lütfen geçerli bir rakam seçiniz.")
+//     break;
+//     }
+
+let metin = "Şuanda Aksaray'da yazılımla uğraşıyoruz."
+
+let harf = prompt("Harfi giriniz.")
+
+let sonuc = bul(harf)
+alert("Harf sayısı: " + sonuc)
+
+function bul(harf){
+let toplam = 0;
+for(let i=0;i<metin.length; i++){
+    if(metin.charAt(i).toLowerCase()===harf.toLowerCase()){
+        toplam+=1;
     }
+}
+return toplam;
+}
