@@ -186,19 +186,143 @@
 //     break;
 //     }
 
-let metin = "Şuanda Aksaray'da yazılımla uğraşıyoruz."
 
-let harf = prompt("Harfi giriniz.")
 
-let sonuc = bul(harf)
-alert("Harf sayısı: " + sonuc)
 
-function bul(harf){
-let toplam = 0;
-for(let i=0;i<metin.length; i++){
-    if(metin.charAt(i).toLowerCase()===harf.toLowerCase()){
-        toplam+=1;
-    }
-}
-return toplam;
-}
+
+
+// let metin = "Şuanda Aksaray'da yazılımla uğraşıyoruz."
+
+// let harf = prompt("Harfi giriniz.")
+
+// let sonuc = bul(harf)
+// alert("Harf sayısı: " + sonuc)
+
+// function bul(harf){
+// let toplam = 0;
+// for(let i=0;i<metin.length; i++){
+//     if(metin.charAt(i).toLowerCase()===harf.toLowerCase()){
+//         toplam+=1;
+//     }
+// }
+// return toplam;
+// }
+
+
+
+
+//Mükemmel sayı uygulaması-----
+
+// let yeniSatir = "\r\n"
+// let sayi = Number(prompt("Mükemmel sayı uygulamasına hoşgeldiniz." + yeniSatir
+//     +"Bir sayının tam bölenlerinin toplamı o sayının" + yeniSatir
+//     + "iki katına eşitse o sayı Mükemmel Sayıdır." + yeniSatir
+//     + "Şimdi mükemmel olup olmadığına bakmak için bir sayı giriniz."
+// ))
+// let toplam=0;
+// let sonuc=0;
+// for(let i=1; i<=sayi; i++){
+// if(sayi%i==0){
+//  sonuc= toplam+=i
+// }
+
+// }
+// if(sayi*2 == sonuc){
+// alert("Bu sayı mükemmel")
+// } else{
+//     alert("Bu sayı mükmmel değil.")
+// }
+
+
+
+// decimaltoBinary(3);
+
+// function decimaltoBinary(number){
+//     let binary="";
+//     while(true){
+//         binary+=(number%2).toString();
+//         number=Math.floor(number/2);
+//         if(number==1){
+//             binary+=1
+//             break;
+//         }
+//     }
+//     let result = reverse(binary);
+//     alert("Sonuç : " + result);
+// }
+// function reverse(binary){
+//     let reverseBinary = ""
+//     for(let i = binary.length-1 ; i--;){
+//         reverseBinary+=binary.charAt(i);
+//     }
+//     return reverseBinary;
+
+
+// let urunler = ["acer", "ac er", "lenovo", "samsung" ,"lenovo", "acer", "acer", "samsung", "lenovo"]
+
+// let search = prompt("Araştırmak istediğiniz laptop markasını giriniz.")
+
+// let sonuc = urunler.includes(search)
+// if(sonuc) {
+//     alert("Bu markadan kalan ürün: " )
+// } else {
+//     alert("Bu markadan maalesef ürünümüz kalmamıştır.")
+// }
+
+// let urun1 = {
+//     İsim: "Acer Swift",
+//     Kategori: "Teknoloji",
+//     Fiyatı:6219
+// }
+
+// let urun2 = {
+//     İsim: "Acer Nitro 5",
+//     Kategori: "Teknoloji",
+//     Fiyatı:15.475
+// }
+
+// let urun3 = {
+//     İsim: "Acer Gaming",
+//     Kategori: "Teknoloji",
+//     Fiyatı:13.999
+// }
+
+
+// let urun4 = {
+//     İsim: "Lenovo V15",
+//     Kategori: "Teknoloji",
+//     Fiyatı:10.999
+// }
+
+// let urun5 = {
+//     İsim: "Lenovo V14",
+//     Kategori: "Teknoloji",
+//     Fiyatı:4.399
+// }
+
+// let urunler = [urun1, urun2, urun3, urun4, urun5];
+// let filtreliurunler = [];
+// let soru = prompt("Bir ürün ismi giriniz")
+
+// filteliurunlerDoldur(urunler)
+// filtreliurunlerYazdir(filtreliurunler)
+
+// function filteliurunlerDoldur(urunler){
+//     urunler.forEach(function (urun) {
+//         if (urun.isim.toUppercase().includes(soru.toUpperCase(),0)){
+//             filtreliurunler.push(urun)
+//         }
+//     });
+        
+// }
+
+// function filtreliurunlerYazdir (urunler){
+//     urunler.forEach(function (urun) {
+//         console.log("----------------------------------------------")
+//         console.log("|" + urun.isim + "|" + urun.Fiyatı + "|" + urun.Kategori)
+//         console.log("----------------------------------------------")
+
+//     })
+// }
+
+
